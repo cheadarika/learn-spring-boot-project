@@ -3,6 +3,7 @@ package org.springclass.springclassproject.controller;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springclass.springclassproject.annotation.AuditFilter;
 import org.springclass.springclassproject.controller.request.AccountCreateRequest;
 import org.springclass.springclassproject.controller.request.AccountUpdateRequest;
 import org.springclass.springclassproject.controller.respnse.AccountResponse;
@@ -33,6 +34,7 @@ public class AccountController {
         return ResponseEntity.ok().body(accountService.findAll(0,10));
     }
 
+    @AuditFilter
     @GetMapping("/list")
     public ResponseEntity<List<AccountEntity>> getList() {
         return ResponseEntity.ok().body(accountService.findAll());
