@@ -3,8 +3,8 @@ package org.springclass.springclassproject.service.implement;
 import lombok.RequiredArgsConstructor;
 import org.springclass.springclassproject.controller.request.AccountUpdateRequest;
 import org.springclass.springclassproject.exception.ResourceNotFoundException;
-import org.springclass.springclassproject.repository.AccountRepository;
 import org.springclass.springclassproject.model.AccountEntity;
+import org.springclass.springclassproject.repository.AccountRepository;
 import org.springclass.springclassproject.service.AccountService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -12,7 +12,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
